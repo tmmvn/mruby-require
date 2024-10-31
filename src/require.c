@@ -86,7 +86,7 @@ compile_rb2mrb(mrb_state *mrb0, const char *code, int code_len, const char *path
     return MRB_DUMP_GENERAL_FAILURE;
   }
 
-  irep = mrb_proc_ptr(result)->body.irep;
+  irep = (mrb_irep *)mrb_proc_ptr(result)->body.irep;
   ret = mrb_dump_irep_binary(mrb, irep, debuginfo, tmpfp);
 
   mrbc_context_free(mrb, c);
