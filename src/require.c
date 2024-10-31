@@ -4,16 +4,13 @@
 #include <fcntl.h>
 #include <setjmp.h>
 #include <unistd.h>
-
 #include "mruby.h"
 #include "mruby/compile.h"
 #include "mruby/dump.h"
 #include "mruby/string.h"
 #include "mruby/proc.h"
-
-#include "opcode.h"
-#include "error.h"
-
+#include "mruby/opcode.h"
+#include "mruby/error.h"
 #include <stdlib.h>
 #include <sys/stat.h>
 
